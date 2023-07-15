@@ -1,0 +1,1 @@
+call C:\ProyectosDjango\tienda\activate.bat

@@ -1,0 +1,67 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px; padding-bottom: 100px">
+    <div class="row">
+        <div class="col-12">
+            <h1 style="padding: 20px;">Ingresar a la tienda</h1>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div class="col-4 border border-3 p-4">
+
+            <form method="POST" id="form">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary"> Ingresar </button>
+                </div>
+
+                <hr>
+
+                <div class="mt-4">
+                    <select id="user-select" class="form-select">
+                        <option value="">Selecciona un usuario de prueba</option>
+                        {% for perfil in perfiles %}
+                        <option value="{{ perfil.usuario.username }}">
+                            {{ perfil.usuario.first_name }} {{ perfil.usuario.last_name }}
+                            (
+                            {{ perfil.tipo_usuario }}
+                            {% if perfil.tipo_usuario == 'Cliente' %}
+                            {% if perfil.subscrito %}
+                            subscrito
+                            {% else %}
+                            no subscrito
+                            {% endif %}
+                            {% endif %}
+                            )
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
+
+            </form>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block script %}
+<script src="{% static 'core/js/ingresar.js' %}"></script>
+{% endblock script %}

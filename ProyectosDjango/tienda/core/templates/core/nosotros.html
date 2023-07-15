@@ -1,0 +1,78 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px; padding-bottom: 100px">
+    <div class="row">
+        <div class="col-12">
+            <h1 style="padding: 20px;">Nosotros</h1>
+            <p>Bienvenido a PetShop, la tienda en línea de alimentos para mascotas donde nos
+                apasiona ofrecer la mejor nutrición para sus fieles amigos peludos. Somos un equipo de amantes
+                de las mascotas y nos esforzamos por proporcionar alimentos de la más alta calidad para
+                garantizar una vida saludable y feliz para sus mascotas.
+
+                Nuestra empresa fue fundada en 2023 por Coca-Cola, quien quería
+                crear una tienda en línea de alimentos para mascotas que ofreciera una amplia variedad de
+                opciones de alimentos para gatos y perros. Desde entonces, hemos crecido y nos hemos expandido,
+                y ahora ofrecemos una amplia gama de alimentos para mascotas de alta calidad, incluyendo
+                opciones de alimentos secos, húmedos, dietas especiales y golosinas.
+
+                En PetShop, nos enorgullecemos de ofrecer alimentos para mascotas de marcas de
+                renombre y confianza que se elaboran con ingredientes de alta calidad. Trabajamos con
+                proveedores que comparten nuestra pasión por la calidad y la nutrición para garantizar que
+                nuestros clientes reciban los mejores productos para sus mascotas.
+
+                Nuestro objetivo es proporcionar una experiencia de compra en línea fácil y conveniente, y para
+                ello, nos aseguramos de que nuestro sitio web sea fácil de navegar y que nuestros procesos de
+                pago sean seguros y eficientes. También ofrecemos envío rápido y gratuito en pedidos superiores
+                a 100M, y nuestro servicio de atención al cliente está disponible para ayudar
+                con cualquier pregunta o inquietud.
+
+                En PetShop, estamos comprometidos a brindar alimentos para mascotas de alta
+                calidad y un servicio excepcional. Esperamos que nos elija como su proveedor de alimentos para
+                mascotas y que nos permita ser parte del cuidado de la salud y la felicidad de sus mascotas.
+                ¡Gracias por visitarnos!</p>
+        </div>
+
+        <div class="row row-cols-2">
+            <div class="col">
+                <div class="card" style="width: 18rem; margin-left: 80px;">
+                    <img src="{% static 'core/img/alien.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Felipe Leiva</h5>
+                        <p class="card-text">Analista Programador</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; margin-left: 80px; margin-bottom: 30px;">
+                    <img src="{% static 'core/img/alien.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fabian Nashe</h5>
+                        <p class="card-text">Analista Programador</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; margin-left: 80px; ">
+                    <img src="{% static 'core/img/alien.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kevin Farias</h5>
+                        <p class="card-text">Analista Programador</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; margin-left: 80px;">
+                    <img src="{% static 'core/img/alien.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Matias Caro</h5>
+                        <p class="card-text">Analista Programador</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+{% endblock content %}
